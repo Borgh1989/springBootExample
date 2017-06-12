@@ -26,9 +26,10 @@ public class DemoApplication extends SpringBootServletInitializer {
 
 	@RequestMapping("/")
 
-	public String show() {
-
-		return "index";
+	public ModelAndView show() {
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("index");
+		return modelAndView;
 	}
 
 }
